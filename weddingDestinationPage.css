@@ -1,0 +1,56 @@
+body {
+  background: linear-gradient(to right, #ee9ca7, #ffdde1);
+}
+
+.destination-header {
+  font-family: "Playball", cursive;
+  text-align: center;
+  color: #ec38bc;
+  font-size: 50px;
+}
+
+.card-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  place-items: center;
+}
+
+.card {
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 300px;
+  height: 200px;
+}
+
+.card-text {
+  text-align: left;
+  font-size: 12px;
+  font-family: "Courier New", Courier, monospace;
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 0;
+}
+
+.card-icon {
+  position: relative;
+  bottom: 100px;
+  margin: 5px 0;
+}
+
+.card-data {
+  padding-left: 30px;
+  margin: 15px 0;
+}
