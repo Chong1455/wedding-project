@@ -2,6 +2,16 @@ body {
   background: linear-gradient(to right, #ee9ca7, #ffdde1);
 }
 
+.searchBox {
+  border-style: "solid";
+  border-width: 1px;
+  padding: 1rem;
+  background-color: #cdecff;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .destination-header {
   font-family: "Playball", cursive;
   text-align: center;
@@ -44,13 +54,23 @@ body {
   padding: 5px 0;
 }
 
+.card-description {
+  font-size: 12px;
+}
+
+.card-activities {
+  font-size: 12px;
+}
+
 .card-icon {
   position: relative;
   bottom: 100px;
   margin: 5px 0;
 }
 
-.card-data {
+.card-address,
+.card-people,
+.card-price {
   padding-left: 30px;
   margin: 15px 0;
 }

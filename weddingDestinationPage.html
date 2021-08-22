@@ -13,124 +13,98 @@
   </head>
   <body>
     <h1 class="destination-header">Wedding Destinations</h1>
-    <div class="card-container">
-      <!-- Paradise 101 Pulau Langkawi -->
-      <div class="card">
-        <img class="card-image" src="./images/langkawi.jpeg" alt="langkawi" />
-        <div class="card-text">
-          <h5 class="card-title">Paradise 101 Pulau Langkawi</h5>
-          <p>
-            Get married on the beach surrounded by your nearest and dearest with
-            a view so stunning, most can only dream of having for their wedding
-            day!
-          </p>
-          <p>Activities: Love boat, sunset and dinner cruises, parasailing</p>
-          <div class="card-data">
-            Paradise 101 Langkawi, 07000 Langkawi, Kedah
-          </div>
-          <div class="card-data">25</div>
-          <div class="card-data">RM3000</div>
-          <div class="card-icon"><img src="./images/map-pin.png" /></div>
-          <div class="card-icon"><img src="./images/people.png" /></div>
-          <div class="card-icon"><img src="./images/price.png" /></div>
-        </div>
-      </div>
+    <input
+      type="text"
+      id="inputTitle"
+      onkeyup="filterTitle()"
+      placeholder="Search destination name"
+      class="searchBox"
+    />
+    <ul class="card-container" id="myUL">
       <!-- Banjaran Hotsprings -->
-      <div class="card">
+      <li class="card">
         <img class="card-image" src="./images/banjaran.jpg" alt="banjaran" />
         <div class="card-text">
-          <h5 class="card-title">The Banjaran Hotsprings Retreat</h5>
-          <p>
-            The limestone hills, verdant rainforest, rejuvenating hot springs,
-            natural caves, and cascading waterfalls make Banjaran Hotsrpings an
-            amazing place for wedding.
-          </p>
-          <p>
-            Activities: Massage at the retreat’s spa, hot springs dipping,
-            jungle walk
-          </p>
-          <div class="card-data">
-            1, Persiaran Lagoon, Sunway 3, 31150 Ipoh, Perak
-          </div>
-          <div class="card-data">20</div>
-          <div class="card-data">RM2000</div>
+          <h5 class="card-title" id="title"></h5>
+          <p class="card-description"></p>
+          <p class="card-activities"></p>
+          <div class="card-address"></div>
+          <div class="card-people"></div>
+          <div class="card-price"></div>
           <div class="card-icon"><img src="./images/map-pin.png" /></div>
           <div class="card-icon"><img src="./images/people.png" /></div>
           <div class="card-icon"><img src="./images/price.png" /></div>
         </div>
-      </div>
+      </li>
       <!-- Bayswater -->
-      <div class="card">
+      <li class="card">
         <img class="card-image" src="./images/bayswater.png" alt="bayswater" />
         <div class="card-text">
-          <h5 class="card-title">Bayswater KLCC</h5>
-          <p>
-            Brand new concept Modern Lifestyle Premier event space located in
-            Kuala Lumpur City Center, overseeing an serendipity outdoor covered
-            garden space perfectly for outdoor events such as ROM or Nikah.
-          </p>
-          <p>
-            Activities: Exquisite wines tasting, dancing, indoor sparkular
-            fireworks
-          </p>
-          <div class="card-data">
-            No 8, Jalan Sejahtera, Kampung Datuk Keramat, 55000 Kuala Lumpur
-          </div>
-          <div class="card-data">150</div>
-          <div class="card-data">RM12000</div>
+          <h5 class="card-title"></h5>
+          <p class="card-description"></p>
+          <p class="card-activities"></p>
+          <div class="card-address"></div>
+          <div class="card-people"></div>
+          <div class="card-price"></div>
           <div class="card-icon"><img src="./images/map-pin.png" /></div>
           <div class="card-icon"><img src="./images/people.png" /></div>
           <div class="card-icon"><img src="./images/price.png" /></div>
         </div>
       </div>
+      <!-- Paradise 101 Pulau Langkawi -->
+      <li class="card">
+        <img class="card-image" src="./images/langkawi.jpeg" alt="langkawi" />
+        <div class="card-text">
+          <h5 class="card-title"></h5>
+          <p class="card-description"></p>
+          <p class="card-activities"></p>
+          <div class="card-address"></div>
+          <div class="card-people"></div>
+          <div class="card-price"></div>
+          <div class="card-icon"><img src="./images/map-pin.png" /></div>
+          <div class="card-icon"><img src="./images/people.png" /></div>
+          <div class="card-icon"><img src="./images/price.png" /></div>
+        </div>
+      </li>
       <!-- Pulau Perhentian -->
-      <div class="card">
+      <li class="card">
         <img
           class="card-image"
           src="./images/perhentian.jpg"
           alt="pulau perhentian"
         />
         <div class="card-text">
-          <h5 class="card-title">Pulau Perhentian</h5>
-          <p>
-            The resort offers a secluded sandbank surrounded by the vast blue
-            ocean. A rather unique and intimate way to celebrate your lifetime
-            of togetherness with your soul mate.
-          </p>
-          <p>Activities: Scuba diving, snorkeling, jungle trekking</p>
-          <div class="card-data">
-            Pulau Perhentian Besar, Terengganu – Malaysia 22300
-          </div>
-          <div class="card-data">25</div>
-          <div class="card-data">RM4000</div>
+          <h5 class="card-title"></h5>
+          <p class="card-description"></p>
+          <p class="card-activities"></p>
+          <div class="card-address"></div>
+          <div class="card-people"></div>
+          <div class="card-price"></div>
           <div class="card-icon"><img src="./images/map-pin.png" /></div>
           <div class="card-icon"><img src="./images/people.png" /></div>
           <div class="card-icon"><img src="./images/price.png" /></div>
         </div>
-      </div>
+      </li>
       <!-- Tanjung Rhu -->
-      <div class="card">
+      <li class="card">
         <img
           class="card-image"
           src="./images/tanjung-rhu.jpg"
           alt="tanjung rhu"
         />
         <div class="card-text">
-          <h5 class="card-title">Tanjung Rhu Resort</h5>
-          <p>
-            In every way, a true haven of romance, privacy, and tranquillity on
-            an uninhabited island, a romantic barbecue under the stars, or al
-            fresco fine-dining on the beach.
-          </p>
-          <p>Activities: Water sports, golf, nature walk</p>
-          <div class="card-data">Tanjung Rhu Resort, 07000 Langkawi, Kedah</div>
-          <div class="card-data">20</div>
-          <div class="card-data">RM3000</div>
+          <h5 class="card-title"></h5>
+          <p class="card-description"></p>
+          <p class="card-activities"></p>
+          <div class="card-address"></div>
+          <div class="card-people"></div>
+          <div class="card-price"></div>
           <div class="card-icon"><img src="./images/map-pin.png" /></div>
           <div class="card-icon"><img src="./images/people.png" /></div>
           <div class="card-icon"><img src="./images/price.png" /></div>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
+    <script src="weddingDestinationPage.js"></script>
   </body>
 </html>
