@@ -13,13 +13,26 @@
   </head>
   <body>
     <h1 class="destination-header">Wedding Destinations</h1>
-    <input
-      type="text"
-      id="inputTitle"
-      onkeyup="filterTitle()"
-      placeholder="Search destination name"
-      class="searchBox"
-    />
+    <div class="input-container">
+      <input
+        type="text"
+        id="inputTitle"
+        onkeyup="filterItem()"
+        placeholder="Search destination name"
+        class="searchBox"
+      />
+      <label>Price: </label>
+      <select name="price" id="price" style="height: 30px; font-size: 15px">
+        <option value="5000"><5000</option>
+        <option value="4000"><4000</option>
+        <option value="3000"><3000</option>
+        <option value="2000"><2000</option>
+        <option value="1000"><1000</option>
+      </select>
+      <button id="btnPrice" class="filterButton">
+        Filter
+      </button>
+    </div>
     <ul class="card-container" id="myUL">
       <!-- Banjaran Hotsprings -->
       <li class="card">

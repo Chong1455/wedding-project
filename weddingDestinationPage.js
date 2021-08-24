@@ -16,7 +16,7 @@ const weddingDestinations = [
     activities: "Exquisite wines tasting, dancing, indoor sparkular fireworks",
     address: "No 8, Jalan Sejahtera, Kampung Datuk Keramat, 55000 Kuala Lumpur",
     people: 100,
-    price: 12000,
+    price: 4700,
   },
   {
     title: "Paradise 101 Pulau Langkawi",
@@ -25,7 +25,7 @@ const weddingDestinations = [
     activities: "Love boat, sunset and dinner cruises, parasailing",
     address: "Paradise 101 Langkawi, 07000 Langkawi, Kedah",
     people: 25,
-    price: 3000,
+    price: 990,
   },
   {
     title: "Pulau Perhentian",
@@ -63,15 +63,21 @@ for (var i = 0; i < titleList.length; i++) {
   priceList[i].innerHTML = "RM" + weddingDestinations[i].price;
 }
 
-function filterTitle() {
+function filterItem() {
   var inputTitle = document.getElementById("inputTitle").value.toUpperCase();
   var ul = document.getElementById("myUL");
   var li = ul.getElementsByTagName("li");
+  var price = parseInt(document.querySelector("#price").value);
   for (var j = 0; j < li.length; j++) {
-    if (titleList[j].innerHTML.toUpperCase().indexOf(inputTitle) > -1) {
+    if (
+      weddingDestinations[j].title.toUpperCase().indexOf(inputTitle) > -1 &&
+      weddingDestinations[j].price < price
+    ) {
       li[j].style.display = "";
     } else {
       li[j].style.display = "none";
     }
   }
 }
+
+document.getElementById("btnPrice").addEventListener("click", filterItem);

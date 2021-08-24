@@ -7,9 +7,25 @@ body {
   border-width: 1px;
   padding: 1rem;
   background-color: #cdecff;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 10px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filterButton {
+  background-color: #cdecff;
+  border: 1px solid;
+  height: 30px;
+  width: 60px;
+}
+
+.filterButton:hover {
+  background-color: #0575e6;
+  color: white;
 }
 
 .destination-header {
