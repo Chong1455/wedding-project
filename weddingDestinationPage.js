@@ -53,6 +53,8 @@ var activitiesList = document.getElementsByClassName("card-activities");
 var addressList = document.getElementsByClassName("card-address");
 var peopleList = document.getElementsByClassName("card-people");
 var priceList = document.getElementsByClassName("card-price");
+var buttons = document.getElementsByClassName("btn");
+
 for (var i = 0; i < titleList.length; i++) {
   titleList[i].innerHTML = weddingDestinations[i].title;
   descriptionList[i].innerHTML = weddingDestinations[i].description;
@@ -80,4 +82,17 @@ function filterItem() {
   }
 }
 
+function buttonDetail() {
+  var id = parseInt(this.id);
+  var weddingDestination = weddingDestinations[id - 1];
+  if (typeof Storage !== "undefined") {
+    sessionStorage.setItem("wedding", JSON.stringify(weddingDestination));
+  }
+  // window.location.href = "contact.html";
+}
+
 document.getElementById("btnPrice").addEventListener("click", filterItem);
+
+for (var k = 0; k < titleList.length; k++) {
+  buttons[k].addEventListener("click", buttonDetail);
+}
