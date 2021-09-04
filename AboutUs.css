@@ -60,14 +60,23 @@ a {
 
 .aboutus-header {
   font-family: "Playball", cursive;
-  text-align: center;
   color: #ec38bc;
-  font-size: 50px;
+  font-size: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+
+.whole {
+  position: relative;
+  text-align: center;
 }
 
 .whole-image {
   height: 100%;
   width: 100%;
+  filter: blur(2px);
 }
 
 .detail-header {
@@ -90,7 +99,7 @@ a {
   font-family: "Teko", sans-serif;
   text-align: center;
   color: #000000;
-  font-size: 30px;
+  font-size: 40px;
 }
 .card-container {
   display: grid;
