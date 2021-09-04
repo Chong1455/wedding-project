@@ -88,7 +88,7 @@ function buttonDetail() {
   if (typeof Storage !== "undefined") {
     sessionStorage.setItem("wedding", JSON.stringify(weddingDestination));
   }
-  // window.location.href = "contact.html";
+  window.location.href = "contactUs.html";
 }
 
 document.getElementById("btnPrice").addEventListener("click", filterItem);
