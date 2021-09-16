@@ -7,20 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
     <link rel="stylesheet" type="text/css" href="contactUs.css" />
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playball&display=swap"
-      rel="stylesheet"
-    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <!-- font awesome cdn link  -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
   </head>
   <body>
     <nav class="zone sticky">
@@ -86,19 +73,39 @@
           <p class="detail">Monday to Saturday(10.00am - 6.00pm)</p>
           <p class="detail"><strong>Contact Information:</strong></p>
           <p class="detail">Hotline:</p>
-          <p class="detail"><i class="fas fa-phone"></i>1200-32-4355</p>
+          <p class="detail">
+            <img
+              src="./images/phone-solid.svg"
+              style="height: 1em"
+            />1200-32-4355
+          </p>
           <p class="detail">Office Line:</p>
-          <p class="detail"><i class="fas fa-phone"></i>012-3235455</p>
+          <p class="detail">
+            <img
+              src="./images/phone-solid.svg"
+              style="height: 1em"
+            />012-3235455
+          </p>
           <p class="detail">Planner Line:</p>
-          <p class="detail"><i class="fas fa-phone"></i>016-7563234</p>
-          <p class="detail"><i class="fas fa-phone"></i>013-8893754</p>
+          <p class="detail">
+            <img
+              src="./images/phone-solid.svg"
+              style="height: 1em"
+            />016-7563234
+          </p>
+          <p class="detail">
+            <img
+              src="./images/phone-solid.svg"
+              style="height: 1em"
+            />013-8893754
+          </p>
         </div>
       </div>
     </div>
     <script>
       $(function () {
         if (typeof Storage !== "undefined") {
-          var retrieveInfo = JSON.parse(sessionStorage.getItem("wedding"));
+          var retrieveInfo = JSON.parse(localStorage.getItem("wedding"));
 
           if (retrieveInfo != null) {
             $("#title").val(retrieveInfo.title);

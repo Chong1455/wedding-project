@@ -3,6 +3,11 @@ body {
   margin: 0;
 }
 
+@font-face {
+  font-family: "Playball";
+  src: url(./fonts/Playball-Regular.ttf);
+}
+
 .zone {
   cursor: pointer;
   color: white;

@@ -1,0 +1,28 @@
+{
+  "name": "Forever & Ever",
+  "short_name": "Forever & Ever",
+  "lang": "en-US",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "theme_color": "#FF9800",
+  "background_color": "#FF9800",
+  "icons": [
+    {
+      "src": "images/wedding-ring-128x128.png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "images/wedding-ring-192x192.png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/wedding-ring-256x256.png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "images/wedding-ring-512x512.png",
+      "sizes": "512x512"
+    }
+  ]
+}

@@ -86,7 +86,7 @@ function buttonDetail() {
   var id = parseInt(this.id);
   var weddingDestination = weddingDestinations[id - 1];
   if (typeof Storage !== "undefined") {
-    sessionStorage.setItem("wedding", JSON.stringify(weddingDestination));
+    localStorage.setItem("wedding", JSON.stringify(weddingDestination));
   }
   window.location.href = "contactUs.html";
 }

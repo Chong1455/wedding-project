@@ -3,6 +3,11 @@
   --black: #130f40;
 }
 
+@font-face {
+  font-family: "Playball";
+  src: url(./fonts/Playball-Regular.ttf);
+}
+
 * {
   /* font-family: "Roboto", sans-serif; */
   margin: 0;
@@ -187,7 +192,7 @@ section {
 
 .box-container {
   display: grid;
-  grid-template-columns: repear(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1.5rem;
 }
 .box {
