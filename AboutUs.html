@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Forever & Ever</title>
+    <link rel="icon" href="./images/wedding-ring.png" type="image/icon type" />
+    <link rel="stylesheet" type="text/css" href="AboutUs.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body onload="checkCookie()">
+    <nav class="zone sticky">
+      <ul class="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="AboutUs.html">About</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="weddingDestinationPage.html">Wedding Destination</a></li>
+        <li class="push"><a href="contactUs.html">Contacts</a></li>
+      </ul>
+    </nav>
+    <br />
+    <br />
+    <br />
+    <div class="whole">
+      <img class="whole-image" src="./images/Wedding-Planning.jpg" alt="" />
+      <h1 class="aboutus-header">About Us</h1>
+    </div>
+    <h2 class="detail-header">Dreams become true when you approach us!</h2>
+    <p class="detail">
+      This is a place for the people to realise their dream. Our goal is to plan
+      a sacred place for all of your event, making it becomes more memorable
+      with your day. As a wedding event planner team, we try to give the best
+      service to our customer with the colorful design and high production for
+      weddings.
+    </p>
+    <p class="detail">
+      In the event planning, we believe in collaborative experience, listen to
+      our customers and share some creative ideas about the flow of the event.
+    </p>
+    <p class="detail">
+      If you have an event and are feeling excited and hopeful, or even a little
+      overwhelmed at the task at hand, call or email us! We love what we do and
+      look forward to discussing how we can help with your event.
+    </p>
+    <h2 class="crew-header">Our Team</h2>
+    <div class="card-container">
+      <!-- Staff 1 -->
+      <div class="card">
+        <img class="card-image" src="./images/steve.jpg" alt="Steve" />
+        <div class="card-text">
+          <h5 class="card-title">Steve</h5>
+          <div class="card-skill">Skill: Event Designer</div>
+          <p>
+            Steve borns with a good sense of design. During his childhood, Steve
+            likes to draw for what he is interested. Before stepping into the
+            industry, he had over 15 years experience for being a graphic
+            designer. A hopeful heart for making more couple pairs to fulfil
+            their wedding dreams made him to give up his work and started to
+            plan event design for lovely couple. He truly loves what he does now
+            and looks forward to design for more meaningful event.
+          </p>
+
+          <div class="card-share">
+            <a href="https://www.facebook.com/"
+              ><img src="./images/facebook.png"
+            /></a>
+            <a href="https://www.twitter.com/"
+              ><img src="./images/twitter.png"
+            /></a>
+            <a href="https://www.instagram.com/"
+              ><img src="./images/instagram.png"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <!-- Staff 2 -->
+      <div class="card">
+        <img class="card-image" src="./images/jessie.jpg" alt="Jessie" />
+        <div class="card-text">
+          <h5 class="card-title">Jessie</h5>
+          <div class="card-skill">Skill: Event Listener</div>
+          <p>
+            Jessie likes to talk and shares about her own ideas. Although she is
+            very talkative, but she is definitely an active listener. During her
+            journey in events planning industry, she has learnt that paying
+            attention to details is key success of an event. With her excellent
+            skills in listening and ideas creation, the customer can go home
+            with a smile after approaching her for event planning.
+          </p>
+
+          <div class="card-share">
+            <a href="https://www.facebook.com/"
+              ><img src="./images/facebook.png"
+            /></a>
+            <a href="https://www.twitter.com/"
+              ><img src="./images/twitter.png"
+            /></a>
+            <a href="https://www.instagram.com/"
+              ><img src="./images/instagram.png"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <!-- Staff 3 -->
+      <div class="card">
+        <img class="card-image" src="./images/david.jpg" alt="David" />
+        <div class="card-text">
+          <h5 class="card-title">David</h5>
+          <div class="card-skill">Skill: Event Photographer</div>
+          <p>
+            Taking best photo is the wonderful thing that happens in the world.
+            David likes to capture every happy moment and store them as a
+            memento. On the event day, David will be the guardian of the happy
+            smiles on the lovely couples' face, capturing the best moments to
+            witness the important day for the couples.
+          </p>
+
+          <div class="card-share">
+            <a href="https://www.facebook.com/"
+              ><img src="./images/facebook.png"
+            /></a>
+            <a href="https://www.twitter.com/"
+              ><img src="./images/twitter.png"
+            /></a>
+            <a href="https://www.instagram.com/"
+              ><img src="./images/instagram.png"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+        let expires = "expires=" + d.toGMTString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+
+      function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(";");
+        for (let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == " ") {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+
+      function checkCookie() {
+        let user = getCookie("username");
+        if (user != "") {
+          alert("Welcome back " + user);
+        } else {
+          user = prompt("What is your name?", "");
+          if (user != "" && user != null) {
+            setCookie("username", user, 7);
+            alert("Your name have been saved to the cookies!");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

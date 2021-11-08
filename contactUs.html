@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Forever & Ever</title>
+    <link rel="icon" href="./images/wedding-ring.png" type="image/icon type" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="contactUs.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <nav class="zone sticky">
+      <ul class="main-nav">
+        <li style="padding: 20px"><a href="index.html">Home</a></li>
+        <li style="padding: 20px"><a href="AboutUs.html">About</a></li>
+        <li style="padding: 20px"><a href="service.html">Service</a></li>
+        <li style="padding: 20px">
+          <a href="weddingDestinationPage.html">Wedding Destination</a>
+        </li>
+        <li class="push" style="padding: 20px">
+          <a href="contactUs.html">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+    <br />
+    <br />
+    <br />
+    <h1 class="contact-header">Contact Us</h1>
+    <section class="contact" id="contact">
+      <div class="heading">
+        <h2>Contact Form</h2>
+        <img src="images/header-img.png" alt="" />
+      </div>
+
+      <form action="" onsubmit="submitNotification()">
+        <div class="inputBox">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+        </div>
+        <div class="inputBox">
+          <input type="number" placeholder="Your Number" required />
+          <input type="text" placeholder="Your Address" required />
+        </div>
+        <div class="inputBox">
+          <input type="text" id="title" placeholder="Title" required />
+          <input type="text" id="activity" placeholder="Activities" required />
+        </div>
+        <div class="inputBox">
+          <input type="number" id="price" placeholder="Price" required />
+          <input
+            type="number"
+            id="people"
+            placeholder="Number of People"
+            required
+          />
+        </div>
+        <textarea
+          placeholder="Comments"
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+        ></textarea>
+        <input type="submit" value="Submit" class="btn" />
+      </form>
+    </section>
+
+    <div class="card">
+      <div class="box-container">
+        <div class="box">
+          <p class="detail"><strong>Operating Time</strong></p>
+          <p class="detail">Monday to Saturday(10.00am - 6.00pm)</p>
+          <p class="detail"><strong>Contact Information:</strong></p>
+          <p class="detail">Hotline:</p>
+          <p class="detail">
+            <img
+              src="./images/phone-solid.svg"
+              style="height: 1em"
+            />1200-32-4355
+          </p>
+          <p class="detail">Office Line:</p>
+          <p class="detail">
+            <img
+              src="./images/phone-solid.svg"
+              style="height: 1em"
+            />012-3235455
+          </p>
+          <p class="detail">Planner Line:</p>
+          <p class="detail">
+            <img
+              src="./images/phone-solid.svg"
+              style="height: 1em"
+            />016-7563234
+          </p>
+          <p class="detail">
+            <img
+              src="./images/phone-solid.svg"
+              style="height: 1em"
+            />013-8893754
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        if (typeof Storage !== "undefined") {
+          var retrieveInfo = JSON.parse(localStorage.getItem("wedding"));
+
+          if (retrieveInfo != null) {
+            $("#title").val(retrieveInfo.title);
+            $("#activity").val(retrieveInfo.activities);
+            $("#price").val(retrieveInfo.price);
+            $("#people").val(retrieveInfo.people);
+          }
+        }
+      });
+    </script>
+
+    <script>
+      function submitNotification() {
+        const notification = new Notification("Form Submission", {
+          body: "You have successfully submitted the form!",
+          icon: "images/wedding-ring.png",
+        });
+      }
+
+      function accessGranted() {
+        const notification = new Notification("Notification Enabled", {
+          body: "You can now get notifications from us!",
+          icon: "images/wedding-ring.png",
+        });
+      }
+      console.log(Notification.permission);
+
+      if (Notification.permission === "granted") {
+        accessGranted();
+      } else if (Notification.permission !== "denied") {
+        Notification.requestPermission().then((permission) => {
+          if (permission === "granted") {
+            accessGranted();
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
