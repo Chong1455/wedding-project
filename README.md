@@ -7,6 +7,9 @@ A wedding planning website that walks couples through the process of wedding pre
 * `Local storage` - to store data about wedding destinations to automatically fill the information in contacts page.
 * `Notifications` - to notify users when they have submitted the contacts form.
 
+# Deployed version
+Live demo👉: https://uccd2223-cks.azurewebsites.net/index.html
+
 # Prerequisites
 Please install or have installed the following:
 * nodejs and npm
