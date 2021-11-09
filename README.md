@@ -14,16 +14,9 @@ Live demo👉: https://uccd2223-cks.azurewebsites.net/index.html
 Please install or have installed the following:
 * nodejs and npm
 
-# Installation
-Clone this repo
-```
-git clone https://github.com/Chong1455/wedding-project
-cd wedding-project
-npm install
-```
-
-# Scripts
-In the project directory, you can run:
-```npm start```
+# How to use
+1. Clone this repo
+2. Run `npm install`
+3. Run `npm start`
 
 Open http://localhost:8081 to view it in the browser.
